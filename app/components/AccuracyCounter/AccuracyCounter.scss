@@ -1,0 +1,12 @@
+.Survey-Accuracy {
+    padding: 0 0 25px;
+    font-size: $f-small;
+
+    span {
+        font-weight: bold;
+    }
+
+    .Accuracy-Percentage.Accuracy-Percentage__Success {
+        color: $c-green;
+    }
+}

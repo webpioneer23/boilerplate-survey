@@ -1,0 +1,125 @@
+.FeedbackPage {
+    padding: 15px 0;
+
+    .StepTitle{
+        text-align:center;
+        text-transform: uppercase;
+    }
+
+    .productImage {
+        .Image-Wrapper {
+            @include preloader(1);
+
+            height: 127px;
+            margin: 0 auto;
+            width: 101px;
+
+            img {
+                height: 127px;
+                width: 101px;
+            }
+        }
+    }
+
+    &.loading {
+        .Product {
+            &-Sample-Text,
+            &-Description,
+            &-Name {
+                background: $c-gainsboro;
+                content: '';
+                display: block;
+                min-height: 10px;
+                margin: 0 auto 2px;
+                text-indent: -9999px;
+                width: 80%;
+
+                @include preloader(1);
+            }
+
+            &-Sample-Text {
+                display: inline-block;
+                max-width: 50px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+
+    .Product {
+        font-size: 11px;
+        margin-top: 16px;
+
+        &-Info {
+            margin: 17px auto 29px;
+            max-width: 200px;
+        }
+
+        &-Name {
+            font-family: $main-font;
+        }
+
+        .Product-Sample {
+            margin: 32px 0 20px;
+
+            &-Icon {
+                background: $c-grayish;
+                background-size: cover;
+                border-radius: 50%;
+                display: inline-block;
+                height: 18px;
+                vertical-align: middle;
+                width: 18px;
+            }
+
+            &-Text {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .voteBox {
+        margin-bottom: 40px;
+
+        .Selection {
+            margin: 0 auto;
+            max-width: 186px;
+        }
+
+        .Button-Wrapper {
+            margin-bottom: 5px;
+
+            .Button {
+                background: $c-gray;
+                color: $c-black;
+                font-size: $f-regular;
+            }
+        }
+    }
+
+    .Thank-You {
+        padding: 0 56px;
+
+        span {
+            color: $c-green;
+        }
+    }
+
+    .Failed-To-Submit {
+        padding: 0 56px;
+
+        span {
+            color: $c-red;
+        }
+    }
+
+    .Shop-Now {
+        margin: 20px auto 30px;
+
+        .Button {
+            font-size: $f-regular;
+            padding: 10px 25px;
+            width: auto;
+        }
+    }
+}

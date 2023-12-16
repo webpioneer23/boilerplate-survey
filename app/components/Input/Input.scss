@@ -1,0 +1,23 @@
+.Input-Wrapper {
+    margin-top: 22px;
+    text-align: left;
+
+    .Input {
+        &-Field {
+            border: 0;
+            border-radius: 8px;
+            box-shadow: $box-white-smoke-inset-1, $box-black-blur-4;
+            padding: 11px 10px;
+            width: 100%;
+        }
+    }
+
+    .Input-Label {
+        &.required::after {
+            content: '*';
+            color: $c-red;
+            font-size: $f-regular;
+            margin: 0 0 0 5px;
+        }
+    }
+}

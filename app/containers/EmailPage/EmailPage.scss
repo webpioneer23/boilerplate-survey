@@ -1,0 +1,48 @@
+.EmailPage {
+    padding: 15px 0;
+
+    p{
+        font-family: 'futura-pt';
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+    }
+
+    .StepTitle {
+        margin: 0 33px;
+        text-align: center;
+    }
+
+    .EmailMYResult{
+        margin-top: 10px;
+    }
+
+    .Button-Wrapper .Button {
+        width: 324px;
+    }
+
+    .NoThanks{
+        .Button-Wrapper .Button{
+            background: #fff;
+            color : #000;
+            border: 2px solid #000;
+        }
+        margin-top: 16px;
+    }
+
+    .EnvelopeIcon{
+        font-size: 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .lockIcon{
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+}

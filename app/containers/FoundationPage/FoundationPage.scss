@@ -1,0 +1,47 @@
+.FoundationPage {
+    margin: 47px 0 56px;
+
+    .Foundation-Item {
+        margin-top: 50px;
+
+        &-0 {
+            margin-top: 40px;
+        }
+
+        .Form-Field {
+            margin-top: 22px;
+        }
+
+        .Dropdown-Input {
+            padding: 11px 32px 11px 10px;
+        }
+    }
+
+    .Foundation-AddNew-Wrapper {
+        margin-bottom: 45px;
+        margin-top: 20px;
+
+        .Foundation-AddNew {
+            color: $c-black;
+            font-family: $main-font;
+            font-size: $f-large;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+    .react-autosuggest__container {
+        .react-autosuggest__input,
+        .react-autosuggest__suggestions-container--open {
+            border: 0;
+            border-radius: 8px;
+            box-shadow: $box-white-smoke-inset-1, $box-black-blur-4;
+            padding: 11px 10px;
+            width: 100%;
+        }
+
+        .react-autosuggest__suggestion:not(:first-child) {
+            padding-top: 12px;
+        }
+    }
+}

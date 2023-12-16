@@ -1,0 +1,129 @@
+@import '../../app.scss';
+
+.HomePage {
+
+    .header {
+        background-color: $dark-brown;
+        padding-top: 22px;
+        padding-bottom: 21px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .header-link {
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .home-brand {
+        position: relative;
+    }
+
+    .home-logo {
+        background-color: $light-brown;
+        width: 140px;
+        height: 140px;
+        border-radius: 8px;
+        border: solid 2px #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        left: calc(50% - 70px);
+        bottom: -70px;
+    }
+
+    .home-body {
+        color: $dark-brown;
+    }
+
+    .title {
+        font-size: 22px;
+        text-align: center;
+        line-height: 1.18;
+        letter-spacing: 0.55px;
+        width: 70%;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 100px;
+    }
+
+    .home-content {
+        margin-top: 30px;
+        font-size: 17px;
+        line-height: 1.17;
+        letter-spacing: 0.5px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .btn{
+        padding: 12px;
+        width: 80%;
+        font-size: 18px;
+        display: block;
+        text-decoration: none;
+        margin: auto;
+
+    }
+
+
+    .btn-primary{
+        background-color: $dark-brown;
+        color: #fff;
+    }
+
+    .btn-secondary{
+        border: solid 1px #340c0c;
+        color: $dark-brown;
+        background-color: #fff;
+    }
+
+    .btn-link{
+        color: $dark-brown;
+    }
+
+    .StepTitle {
+        margin: 0 33px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .Form-Wrapper {
+        .Options {
+            margin-bottom: 22px;
+            text-align: left;
+
+            &-Item {
+                margin-top: 22px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                label {
+                    font-size: 11px;
+                    margin-left: 10px;
+                    text-align: left;
+                    line-height: 1.27;
+                }
+
+                input {
+                    flex: none;
+                }
+            }
+        }
+    }
+}
+
+.Agreement {
+    &-Text a {
+        color: $c-black;
+        text-decoration: none;
+    }
+}

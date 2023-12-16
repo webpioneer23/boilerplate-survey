@@ -1,0 +1,167 @@
+.SurveyPage .Survey-Item-Element-Tick-Container{
+
+}
+
+.SurveyPage {
+    padding: 15px 0;
+
+    .Loader {
+        padding: 50px;
+    }
+
+    .StepTitle {
+        margin: 0 33px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $f-dubiel-italic;
+    }
+
+
+
+    .Survey-Options {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .Survey-Item {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 147px;
+
+        &-Shade {
+            margin: 0 auto;
+            font-weight: normal;
+            font-family: $main-font;
+            font-size: $f-regular-large;
+
+            p {
+                margin: 10px 0 17px;
+            }
+        }
+
+        &-Element {
+            background-size: cover;
+            display: flex;
+            height: 101px;
+            width: 101px;
+            border-radius: 8px;
+
+            &-Gradient-Background, &-Inner-Image-Background {
+                border-radius: 8px;
+                display: flex;
+                flex: 1 1 100%;
+                z-index: 5;
+            }
+
+            &-Tick-Container {
+                flex: 1 1 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-position: center;
+                border-radius:8px;
+                height: 101px;
+                width: 101px;
+                background-size:142px 142px !important;
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        &.Selected {
+            .Survey-Item-Shade {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .Skip-Step {
+        display: none;
+    }
+
+    &-3 {
+        .Skip-Step {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    &-1, &-2 {
+        .Survey-Item-Element-Tone-Container{
+            position: absolute;
+            margin-left: auto;
+            align-self: flex-end;
+            width: inherit;
+            div {
+                border-top: 3px solid white;
+                border-left: 3px solid white;
+                border-radius: 0 0 8px 0;
+                width: 23px;
+                height: 23px;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &-1, &-2, &-3, &-8 {
+        .Selected {
+            .Survey-Item-Element-Gradient-Background {
+                background-color:#000;
+            }
+
+            .Survey-Item-Element-Tick-Container img {
+                display: flex;
+                background-size: 104px 104px;
+            }
+
+            .Survey-Item-Shade {
+                color: $c-black;
+            }
+        }
+    }
+
+    &-2{
+        
+        .Selected {
+
+            .Survey-Item-Shade p{
+                color: #fff;
+            }
+        }
+
+        .Survey-Item-Shade p{
+            color: #fff;
+        }
+
+    }
+
+    &-4, &-5 {
+        .Survey-Item {
+            &-Element {
+                height: 101px;
+                padding: 0;
+                width: 101px;
+            }
+        }
+
+        .Survey-Item-Element-Tick-Container img {
+            background-size: 104px 104px;
+        }
+
+        .Survey-Item-Element-Tick-Container{
+            background-size: 104px 104px;
+        }
+
+        .Selected {
+            .Survey-Item-Element-Tick-Container {
+                border: 2px solid black;
+                background-size: 104px 104px;
+            }
+        }
+    }
+}

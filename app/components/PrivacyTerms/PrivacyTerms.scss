@@ -1,0 +1,22 @@
+.PrivacyTerms {
+    margin: 34px 0 20px;
+
+    .Privacy,
+    .Terms {
+        font-size: 11px;
+        text-decoration: none;
+
+        &:link {
+            color: $c-blue;
+        }
+    }
+
+    .Terms {
+        &::before {
+            color: $c-black;
+            content: '-';
+            font-size: 12px;
+            margin: 0 3px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.RadioButton-Wrapper {
+    .RadioButton-Outer {
+        border: $b-dark-grayish-1;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 2px;
+        vertical-align: middle;
+
+        .RadioButton {
+            background: $c-white;
+            border-radius: 50%;
+            height: 21px;
+            width: 21px;
+
+            &-Active {
+                background: $c-grayish;
+            }
+        }
+    }
+
+    .RadioButton-Text {
+        font-size: 11px;
+        margin-left: 10px;
+    }
+}

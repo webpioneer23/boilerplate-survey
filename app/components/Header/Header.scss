@@ -1,0 +1,40 @@
+.Header {
+    // padding-bottom: 10px;
+
+    .Logo {
+        &-Image {
+            height: 61px;
+            margin: 0 auto ;
+            width: 61px;
+        }
+    }
+
+    .Back-Wrapper {
+        min-height: 41px;
+
+        .Button {
+            -webkit-tap-highlight-color: transparent;
+            color: $c-black;
+            font-size: 13px;
+            background: none;
+            text-align: left;
+            margin-top: 5px;
+
+            &:before{
+                content: '';
+                display: inline-block;
+                margin: 0 4px 1px 0;
+                border: 1px solid black;
+                border-top: none;
+                border-right: none;
+                width: 7px;
+                height: 7px;
+                transform: rotate(45deg);
+            }
+
+            &.hold {
+                display: none;
+            }
+        }
+    }
+}

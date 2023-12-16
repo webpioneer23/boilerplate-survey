@@ -1,0 +1,100 @@
+.Coupon {
+    &-Wrapper {
+        max-width: 337px;
+        height: 157px;
+        margin: 20px auto 30px;
+        padding: 16px 24px 17px 28px;
+        border-radius: 8px;
+        border: solid 1px $c-limeade;
+        background-color: $c-carla;
+    }
+
+    &-Text {
+        max-width: 285px;
+        height: 60px;
+        margin: 0 0 14px;
+        font-family: $main-font;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        text-align: center;
+        color: $c-black;
+
+        b {
+            font-weight: bold;
+        }
+
+        &.No-Available {
+            margin-top: 38px;
+            font-weight: bold;
+        }
+    }
+
+    &-Unlock {
+        padding: 10px 45px;
+        font-family: $main-font;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        width: 204px;
+        height: 36px;
+        border-radius: 8px;
+        background-color: #4a9b38;
+    }
+
+    &-CodeBox {
+        max-width: 265px;
+        height: 50px;
+        margin: 14px 10px 0;
+        padding: 7px 6px 7px 9.5px;
+        border-radius: 8px;
+        border: solid 1px $c-silver;
+        background-color: $c-white;
+
+
+        &-Text {
+            float: left;
+            position: relative;
+            max-width: 190px;
+            height: 100%;
+            padding-top: 8px;
+            font-family: $main-font;
+            font-size: 13px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            text-transform: uppercase;
+            color: $c-black;
+        }
+
+
+
+        &-Copy {
+            float: right;
+            width: 36px;
+            height: 36px;
+            padding: 7px;
+            border-radius: 8px;
+            background-color: $c-apple;
+            background-image: url('../../../images/icons/copy/icon-copy.png');
+            background-image: -webkit-image-set(url('../../../images/icons/copy/icon-copy.png') 1x,
+                url('../../../images/icons/copy/icon-copy@2x.png') 2x,
+                url('../../../images/icons/copy/icon-copy@3x.png') 3x
+            );
+            background-repeat: no-repeat;
+            background-size: 22px;
+            background-position: center;
+
+            &:active {
+                opacity: .2;
+            }
+        }
+    }
+}

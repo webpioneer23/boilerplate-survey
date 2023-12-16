@@ -1,0 +1,19 @@
+.Button-Wrapper {
+    .Button {
+        background: $c-black;
+        border: 0;
+        border-radius: 0px;
+        color: $c-white;
+        display: inline-block;
+        font-size: $f-large;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 9px 0 10px;
+        text-decoration: none;
+        width: 100%;
+
+        &.hold {
+            background: $c-dark-grayish;
+        }
+    }
+}

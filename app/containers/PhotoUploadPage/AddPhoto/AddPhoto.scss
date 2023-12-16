@@ -1,0 +1,367 @@
+.AddPhoto {
+    &-About {
+        margin: 20px auto 10px;
+        text-align: left;
+
+        p {
+            font-size: 14px;
+            line-height: 1.29;
+
+            &:nth-of-type(2) {
+                margin: 20px 0 15px;
+            }
+        }
+    }
+
+    &-Input {
+        margin-top: 30px;
+    }
+
+    &-List {
+        margin-bottom: 60px;
+    }
+
+    .Guide {
+        text-align: left;
+
+        .Icon {
+            padding: 0 40px;
+            margin: 20px 0;
+            position: relative;
+            display: flex;
+            align-content: center;
+
+            &::before {
+                background-repeat: no-repeat;
+                background-size: cover;
+                content: '';
+                display: block;
+                height: 25px;
+                left: 0;
+                position: absolute;
+                top: -5px;
+                width: 25px;
+            }
+            &.fail {
+                &::before {
+                    background-image: url('../../../images/icons/button-warning/button-warning.png');
+                    background-image: -webkit-image-set(url('../../../images/icons/button-warning/button-warning.png') 1x,
+                            url('../../../images/icons/button-warning/button-warning@2x.png') 2x,
+                            url('../../../images/icons/button-warning/button-warning@3x.png') 3x
+                    );
+                }
+            }
+
+            &.success {
+                &::before {
+                    background-image: url('../../../images/icons/button-success/button-success.png');
+                    background-image: -webkit-image-set(url('../../../images/icons/button-success/button-success.png') 1x,
+                            url('../../../images/icons/button-success/button-success@2x.png') 2x,
+                            url('../../../images/icons/button-success/button-success@3x.png') 3x
+                    );
+                }
+            }
+        }
+    }
+}
+
+.chooseFileButton {
+    color: $c-white;
+    border: solid 1px $c-white-smoke;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.11);
+    background: $c-black;
+    font-family: $main-font;
+    font-size: $f-large;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 38px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 9px 0 10px;
+    cursor: pointer;
+
+    &::before {
+        background-image: url('../../../images/icons/button-camera/button-camera-white.png');
+        background-image: -webkit-image-set(url('../../../images/icons/button-camera/button-camera-white.png') 1x,
+                url('../../../images/icons/button-camera/button-camera-white@2x.png') 2x,
+                url('../../../images/icons/button-camera/button-camera-white@3x.png') 3x
+        );
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        margin-right: 5px;
+        margin-top: 2px;
+        width: 20px;
+    }
+
+    &__disabled {
+        background: $c-dark-grayish;
+        color: #fff;
+
+        &::before {
+            background-image: url('../../../images/icons/lock/lock.png');
+            background-image: -webkit-image-set(url('../../../images/icons/lock/lock.png') 1x,
+                    url('../../../images/icons/lock/lock@2x.png') 2x,
+                    url('../../../images/icons/lock/lock@3x.png') 3x
+            );
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            margin: 2px 3px 0;
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+.ImageUpload {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    input {
+        display: none;
+    }
+}
+
+.ImageUpload-ImageIssue {
+    min-height: 47px;
+    margin-bottom: 20px;
+
+    h4 {
+        font-weight: bold;
+        color: #af0808;
+        font-style: italic;
+        font-family: $main-font;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+        font-style: italic;
+        font-family: $main-font;
+        margin: 2px auto;
+    }
+}
+
+.ImageUpload-PreviewContainer {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 77px;
+}
+
+.ImageUpload-RemoveButton {
+    border: none;
+    background: transparent;
+    margin: 2px auto;
+    text-decoration: underline;
+    font-size: 11px;
+    box-shadow: none;
+    text-align: center;
+    padding: 0;
+}
+
+.ImagePreview {
+    display: flex;
+    flex-direction: column;
+    margin: 3px 5px;
+    position: relative;
+
+    img, span {
+        background-color: #f2f2f2;
+        width: 98px;
+        height: 98px;
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    div {
+        position: relative;
+        display: flex;
+    }
+}
+
+.ImagePreview-Image {
+    &__success::before, &__fail::before, &__pending::before {
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        display: block;
+        height: 15px;
+        right: 0;
+        position: absolute;
+        bottom: 0;
+        width: 15px;
+    }
+
+    &__pending {
+        img {
+            visibility: hidden;
+        }
+
+        &::before {
+            background-image: url('../../../images/mime-loader.gif');
+            background-position: center;
+            bottom: 15%;
+            color: $c-black;
+            content: 'UPLOADING';
+            font-family: $f-helvetica-bold;
+            height: 80px;
+            padding-top: 80px;
+            right: 12%;
+            width: 80px;
+        }
+    }
+
+    &__success::before {
+        background-image: url('../../../images/icons/button-success/button-success.png');
+        background-image: -webkit-image-set(url('../../../images/icons/button-success/button-success.png') 1x,
+                url('../../../images/icons/button-success/button-success@2x.png') 2x,
+                url('../../../images/icons/button-success/button-success@3x.png') 3x
+        );
+    }
+
+    &__fail::before {
+        background-image: url('../../../images/icons/button-warning/button-warning.png');
+        background-image: -webkit-image-set(url('../../../images/icons/button-warning/button-warning.png') 1x,
+                url('../../../images/icons/button-warning/button-warning@2x.png') 2x,
+                url('../../../images/icons/button-warning/button-warning@3x.png') 3x
+        );
+    }
+}
+
+.fileContainer {
+    box-shadow: none;
+    margin-bottom: 28px;
+
+    .uploadPicturesWrapper {
+        & > div {
+            display: block !important;
+        }
+
+        .uploadPictureContainer {
+            background: none;
+            border: none;
+            box-shadow: none;
+            justify-content: left;
+            margin:0 0 15px 0;
+            padding: 0;
+            width: 100%;
+
+            .image {
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+                height: 55px;
+                overflow: hidden;
+                width: 55px;
+            }
+
+            .deleteImage {
+                background-color: transparent;
+                background-image: url('../../../images/icons/button-close/button-close.png');
+                background-image: -webkit-image-set(url('../../../images/icons/button-close/button-close.png') 1x,
+                        url('../../../images/icons/button-close/button-close@2x.png') 2x,
+                        url('../../../images/icons/button-close/button-close@3x.png') 3x
+                );
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                text-indent: -9999px;
+                top: 10px;
+            }
+
+            .status {
+                color: $c-gainsboro;
+                margin-left: 9px;
+                padding-left: 30px;
+                position: relative;
+
+                &::before {
+                    background-image: url('../../../images/icons/button-uploading/button-uploading.png');
+                    background-image: -webkit-image-set(url('../../../images/icons/button-uploading/button-uploading.png') 1x,
+                            url('../../../images/icons/button-uploading/button-uploading@2x.png') 2x,
+                            url('../../../images/icons/button-uploading/button-uploading@3x.png') 3x
+                    );
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    content: '';
+                    display: block;
+                    height: 25px;
+                    left: 0;
+                    position: absolute;
+                    top: -5px;
+                    width: 25px;
+                }
+            }
+
+            &.pending {
+                .deleteImage {
+                    display: none;
+                }
+            }
+
+            &.removing {
+                .deleteImage {
+                    display: none;
+                }
+
+                .status::before {
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+            }
+
+            &.fail {
+                .status {
+                    color: $c-red;
+                    &::before {
+                        background-image: url('../../../images/icons/button-fail/button-fail.png');
+                        background-image: -webkit-image-set(url('../../../images/icons/button-fail/button-fail.png') 1x,
+                                url('../../../images/icons/button-fail/button-fail@2x.png') 2x,
+                                url('../../../images/icons/button-fail/button-fail@3x.png') 3x
+                        );
+                    }
+                }
+            }
+
+            &.success {
+                .status {
+                    color: $c-green;
+                    &::before {
+                        background-image: url('../../../images/icons/button-success/button-success.png');
+                        background-image: -webkit-image-set(url('../../../images/icons/button-success/button-success.png') 1x,
+                                url('../../../images/icons/button-success/button-success@2x.png') 2x,
+                                url('../../../images/icons/button-success/button-success@3x.png') 3x
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    .RetryButton {
+        color: $c-black;
+        font-family: $main-font;
+        font-size: $f-regular;
+
+        button {
+            background: none;
+            border: 0;
+            padding: 0;
+            text-decoration: underline;
+        }
+
+        .Separator {
+            margin: 0 5px;
+        }
+    }
+}

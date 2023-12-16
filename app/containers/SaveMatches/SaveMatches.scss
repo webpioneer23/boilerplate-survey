@@ -1,0 +1,41 @@
+.SaveMatches {
+    padding: 15px 0;
+
+    .StepTitle {
+        margin: 0 33px;
+        text-align: center;
+    }
+
+    .Form-Wrapper {
+        .Options {
+            margin-bottom: 22px;
+            text-align: left;
+
+            &-Item {
+                margin-top: 22px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                label {
+                    font-size: 11px;
+                    margin-left: 10px;
+                    text-align: left;
+                    line-height: 1.27;
+                }
+
+                input {
+                    flex: none;
+                }
+            }
+        }
+    }
+}
+
+.Agreement {
+    &-Text a {
+        color: $c-black;
+        text-decoration: none;
+    }
+}

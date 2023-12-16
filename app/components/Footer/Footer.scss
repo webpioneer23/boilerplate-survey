@@ -1,0 +1,18 @@
+.Footer {
+    margin-bottom: 40px;
+    margin-top: 25px;
+
+    .Logo {
+        text-align: center;
+
+        &-Text {
+            font-size: 9px;
+        }
+
+        &-Image {
+            height: 17px;
+            margin-left: 4px;
+            width: 62px;
+        }
+    }
+}

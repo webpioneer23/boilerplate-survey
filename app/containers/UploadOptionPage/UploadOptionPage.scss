@@ -1,0 +1,110 @@
+.WelcomePage {
+    padding: 15px 0;
+
+    p{
+        font-family: 'futura-pt';
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+    }
+
+    .firstSubTitle
+    {
+        margin: 20px auto;
+        width: 262px;
+        height: 32px;
+        font-family: 'futura-pt';
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+    }
+
+    .secondSubTitle
+    {
+        margin: 20px auto;
+        height: 16px;
+        font-family: 'futura-pt';
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000;
+        margin-bottom: 38px;
+        margin-top: 38px;
+    }
+
+    .StepTitle {
+        margin: 0 33px;
+        text-align: center;
+    }
+
+    .EmailMYResult{
+        margin-top: 10px;
+    }
+
+    .Button-Wrapper .Button {
+        width: 324px;
+    }
+
+    .TakePhoto{
+        margin: 10px auto;
+
+        .Button-Wrapper .Button {
+            &::before {
+                background-image: url('../../images/icons/button-camera/button-camera-white.png');
+                background-image: -webkit-image-set(url('../../images/icons/button-camera/button-camera-white.png') 1x,
+                        url('../../images/icons/button-camera/button-camera-white@2x.png') 2x,
+                        url('../../images/icons/button-camera/button-camera-white@3x.png') 3x
+                );
+                background-repeat: no-repeat;
+                content: '';
+                display: inline-block;
+                height: 20px;
+                margin-right: 5px;
+                width: 20px;
+                position: relative;
+                top:6px
+            }
+        }
+    }
+
+    .UploadPhoto{
+        margin: 12px auto;
+    }
+
+    .NoThanks{
+        .Button-Wrapper .Button{
+            background: #fff;
+            color : #000;
+            border: 2px solid #000;
+        }
+        margin-top: 12px;
+    }
+
+    .EnvelopeIcon{
+        font-size: 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-bottom: -15px;
+    }
+
+    .lockIcon{
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .secondSubTitle img{
+        width: 16px;
+        height: 16px;
+    }
+
+}

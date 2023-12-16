@@ -1,0 +1,67 @@
+.InstructionsPage {
+    padding: 15px 0 0px 0;
+
+    .StepTitle {
+        margin: 0 33px;
+        text-align: center;
+    }
+
+    p {
+        margin: 12px 14px 43px;
+        text-align: center;
+    }
+
+    .List {
+        margin-bottom: 76px;
+        padding: 0 24px 0 14px;
+        text-align: left;
+        &-Item {
+            align-items: center;
+            color: $c-green;
+            display: flex;
+            margin-bottom: 10px;
+            min-height: 25px;
+
+            &-Instructions {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+            span {
+                margin: 7px 0 7px 50px;
+                position: relative;
+                &::before {
+                    background-image: url('../../images/icons/button-success/button-success.png');
+                    background-image: -webkit-image-set(url('../../images/icons/button-success/button-success.png') 1x,
+                            url('../../images/icons/button-success/button-success@2x.png') 2x,
+                            url('../../images/icons/button-success/button-success@3x.png') 3x
+                    );
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    content: '';
+                    display: block;
+                    height: 25px;
+                    left: -35px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 25px;
+                }
+            }
+
+            &.Notice {
+                color: $c-red;
+                span {
+                    &::before {
+                        background-image: url('../../images/icons/button-warning/button-warning.png');
+                        background-image: -webkit-image-set(url('../../images/icons/button-warning/button-warning.png') 1x,
+                                url('../../images/icons/button-warning/button-warning@2x.png') 2x,
+                                url('../../images/icons/button-warning/button-warning@3x.png') 3x
+                        );
+                    }
+                }
+            }
+        }
+    }
+}

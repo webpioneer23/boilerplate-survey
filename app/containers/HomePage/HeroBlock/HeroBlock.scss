@@ -1,0 +1,52 @@
+.HeroBlock {
+    background-image: url('../../../images/background/background-hero.jpg');
+    background-image: -webkit-image-set(url('../../../images/background/background-hero.jpg') 1x,
+        url('../../../images/background/background-hero@2x.jpg') 2x,
+        url('../../../images/background/background-hero@3x.jpg') 3x
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 25px 20px;
+    text-align: center;
+
+    &-Inner {
+        border: $b-white-1;
+        border-radius: 40px 0;
+
+        h1 {
+            -webkit-text-stroke: 1px #ffffff;
+            font-family: $main-font;
+            font-size: 38px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.98;
+            letter-spacing: normal;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0);
+            margin: 40px 13px;
+        }
+
+        p {
+            font-family: $main-font;
+            font-weight: 100;
+            margin: 10px 56px 19px;
+
+            &.Beta {
+                font-size: $f-small;
+                font-style: italic;
+                font-weight: 300;
+                text-align: right;
+                margin: 0 56px;
+            }
+        }
+
+
+        &-Logo {
+            max-width: 330px;
+            margin: 40px auto;
+        }
+    }
+}

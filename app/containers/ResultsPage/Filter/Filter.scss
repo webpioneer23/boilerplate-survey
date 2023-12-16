@@ -1,0 +1,147 @@
+.Filter-Wrapper {
+    margin: 0;
+
+    .Filter {
+        &-Heading {
+            margin: 10px auto 30px auto;
+            width: 70%;
+        }
+
+        &-Title {
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        &-LinkText {
+            background: $c-purple;
+            color: $c-white;
+            font-family: $main-font;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: $f-small;
+            padding: 3px 13px;
+            border-radius: 4px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-Menu {
+            background: $c-white;
+            display: none;
+            flex-direction: column;
+            left: 0;
+            padding: 19px 19px 45px 14px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+
+            &-Wrapper {
+                margin: 0 auto;
+                max-width: 540px;
+            }
+
+            &.Visible {
+                display: flex;
+                height: 100%;
+            }
+
+            &-Close {
+                display: flex;
+                flex-flow: column;
+                justify-content: right;
+            }
+
+            &-CloseButton {
+                align-self: flex-end;
+                background-image: url('../../../images/assets/button-close/button-close.png');
+                background-image: -webkit-image-set(url('../../../images/assets/button-close/button-close.png') 1x,
+                    url('../../../images/assets/button-close/button-close@2x.png') 2x,
+                    url('../../../images/assets/button-close/button-close@3x.png') 3x
+                );
+                height: 24px;
+                width: 24px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &-Title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 18px;
+                text-align: left;
+            }
+
+            .Filter-Submenu {
+                margin: 13px 0 38px;
+                padding: 0;
+
+                .Item {
+                    &-Title {
+                        font-family: $f-montserrat;
+                        font-size: 20px;
+                        margin-top: 30px;
+                        text-align: left;
+                        text-transform: capitalize;
+                    }
+
+                    .Option {
+                        &-List {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-top: 12px;
+                        }
+
+                        &-Item {
+                            background: $c-gray;
+                            margin-top: 5px;
+                            padding: 11px 11px 11px 10px;
+
+                            &:not(:last-child) {
+                                margin-right: 5px;
+                            }
+
+                            &.Selected {
+                                background: $c-black;
+                                color: $c-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Button-Wrapper {
+                margin: 0;
+            }
+        }
+    }
+
+    .PhotoIssueTitle{
+        width: 337px;
+        margin: 10px auto 30px;
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        color: #000;
+    }
+
+    .PhotoIssueMessage{
+        width: 303px;
+        margin: 30px auto;
+        font-size: 16px;
+        text-align: center;
+        color: #000;
+    }
+
+    .TRY-Another-PHOTO-BTN{
+        width: 260px;
+        margin: 0px auto;
+    }
+
+
+}

@@ -1,0 +1,33 @@
+.Dropdown {
+    text-align: left;
+
+    &-control:hover {
+        box-shadow: $box-white-smoke-inset-1, $box-black-blur-4;
+    }
+
+    &-Input {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: $box-white-smoke-inset-1, $box-black-blur-4;
+        padding: 11px 32px 11px 20px;
+    }
+
+    &-Arrow {
+        bottom: 0;
+        color: $c-dark-grey;
+        font-size: $f-small;
+        margin: auto;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        transition-duration: .1s;
+
+        &-Open {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &-Arrow-Hidden {
+        display: none;
+    }
+}

@@ -1,0 +1,180 @@
+:root {
+    --out-of-stock-icon-background-color: #f4c51f;
+}
+
+.Product {
+
+    &-ExtraBold{
+        font-weight: 600;
+    }
+
+    &-Price {
+        color: $c-black;
+    }
+
+    &-RegularPrice {
+        color: $c-light-gray;
+    }
+
+    &-FeaturedFor {
+        font-weight: bold;
+        flex: 1;
+        flex-wrap: wrap;
+    }
+
+    &-ControlBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+
+    &-Image {
+        @include preloader;
+        display: flex;
+        height: 100%;
+        max-width: 187px;
+
+        &.loaded {
+            background: $c-white;
+        }
+
+        img {
+            align-self: center;
+            width: 100%;
+        }
+    }
+
+    &-AddToBasketWrapper {
+        flex: 1;
+        text-align: right;
+    }
+
+    &-AddToBasketButton {
+        background: $c-black;
+        color: $c-white;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 6px 10px;
+        font-size: $f-small;
+        font-weight: 700;
+    }
+
+    &-OutOfStockNotice {
+        font-size: 11px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    &-OutOfStockIcon {
+        padding: 0 4px;
+        border-radius: 50%;
+        background-color: var(--out-of-stock-icon-background-color);
+        font-size: 8px;
+        color: $c-white;
+        margin-right: 6px;
+    }
+
+    &-JoinWaitlist {
+        font-weight: bold;
+        color: $c-black;
+    }
+
+    &-ColorBar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 21px;
+        height: 100%;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    &-Item {
+        text-align: left;
+        position: relative;
+        margin: 10px auto;
+    }
+
+    &-Info {
+        line-height: 1.36;
+    }
+
+    &-Description {
+        &::after {
+            content: '-';
+            margin: 0 3px;
+        }
+    }
+
+    &-Additional {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 22px;
+    }
+
+    &-Sample {
+        &-Icon {
+            background: $c-grayish;
+            background-size: cover;
+            border-radius: 50%;
+            display: inline-block;
+            height: 18px;
+            vertical-align: middle;
+            width: 18px;
+        }
+
+        &-Text {
+            font-size: 10px;
+            margin-left: 4px;
+        }
+    }
+
+    &-Wishlist {
+        background: 0;
+        border: 0;
+        color: $c-grayish;
+        padding: 0;
+    }
+
+    &-Description-Block {
+        margin: 0 6px;
+
+        &__right {
+            width: 100%;
+        }
+    }
+    &-Attributes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: left;
+        margin-top: 9px;
+    }
+
+    &-Attribute {
+        font-size: 11px;
+        margin: 5px 0;
+        display: flex;
+        align-items: flex-start;
+        flex: 1 1 50%;
+        order: 2;
+
+        img {
+            width: 10px;
+            height: 10px;
+            margin-right: 6px;
+        }
+    }
+
+    &-Attribute[data-label="finish"] {
+        order: 4;
+    }
+
+    &-Attribute[data-label="matchScore"] {
+        order: 1;
+    }
+}

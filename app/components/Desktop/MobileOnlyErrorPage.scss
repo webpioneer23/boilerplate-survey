@@ -1,0 +1,26 @@
+.MobileOnlyErrorPage-ErrorDescription {
+    margin: 35px 50px;
+
+    h2 {
+        margin: 10px auto;
+    }
+}
+
+.MobileOnlyErrorPage-FormContainer {
+    max-width: 300px;
+    margin: 0 auto;
+
+    .Input-Wrapper, .Button-Wrapper {
+        margin: 10px auto;
+    }
+}
+
+.MobileOnlyErrorPage-FeedbackSent {
+    color: $c-green;
+}
+
+.legalCopy{
+    margin-top: 20px;
+    font-size:11px;
+    color: #c1c1c1;
+}

@@ -1,0 +1,21 @@
+@mixin preloader($delay: 0) {
+    background: linear-gradient(236deg, $c-light-gray, $c-alto);
+    background-size: 400% 400%;
+    animation: LoadingEffect 2s ease infinite $delay+s;
+
+    @-webkit-keyframes LoadingEffect {
+        0%{background-position:0 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0 96%}
+    }
+    @-moz-keyframes LoadingEffect {
+        0%{background-position:0 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0 96%}
+    }
+    @keyframes LoadingEffect {
+        0%{background-position:0 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0 96%}
+    }
+}
